@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Japan: Land of the Rising Sun | Student Tour 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#15202b;
+      --muted:#667085;
+      --paper:#fffaf4;
+      --card:#ffffff;
+      --red:#d9343a;
+      --red-dark:#a61d28;
+      --gold:#d8a23a;
+      --green:#19483f;
+      --line:#eadfd3;
+      --shadow: 0 20px 60px rgba(21,32,43,.12);
+      --radius: 26px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink);background:linear-gradient(180deg,#fff8ef 0%,#f6efe6 100%)}
+    a{color:inherit;text-decoration:none}
+    .hero{min-height:92vh;display:grid;place-items:center;padding:34px;position:relative;overflow:hidden;background:
+      radial-gradient(circle at 82% 16%, rgba(217,52,58,.20) 0 12%, transparent 13%),
+      linear-gradient(135deg, rgba(25,72,63,.95), rgba(20,45,43,.92)),
+      url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?auto=format&fit=crop&w=1800&q=80') center/cover;
+      background-blend-mode:screen,multiply,normal;
+    }
+    .hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 80%)}
+    .nav{position:absolute;top:24px;left:50%;transform:translateX(-50%);width:min(1120px,calc(100% - 36px));display:flex;align-items:center;justify-content:space-between;gap:16px;z-index:2;color:#fff}
+    .brand{font-weight:800;letter-spacing:.04em;text-transform:uppercase;font-size:13px;display:flex;align-items:center;gap:10px}.brand span{width:34px;height:34px;border-radius:50%;background:var(--red);display:grid;place-items:center;box-shadow:0 0 0 8px rgba(255,255,255,.10)}
+    .navlinks{display:flex;gap:20px;font-size:14px;color:rgba(255,255,255,.85)}
+    .hero-card{position:relative;z-index:1;width:min(1080px,100%);padding:76px 48px;border-radius:38px;background:rgba(255,250,244,.88);backdrop-filter:blur(14px);box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.55)}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;background:rgba(217,52,58,.10);color:var(--red-dark);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+    h1{font-family:'Playfair Display',serif;font-size:clamp(48px,8vw,96px);line-height:.92;margin:22px 0 18px;letter-spacing:-.055em;color:#15201d}.lead{font-size:clamp(18px,2vw,23px);line-height:1.55;color:#3f4c4a;max-width:780px;margin:0 0 30px}.hero-actions{display:flex;flex-wrap:wrap;gap:14px}.btn{padding:14px 20px;border-radius:999px;font-weight:800;background:var(--red);color:#fff;box-shadow:0 12px 28px rgba(217,52,58,.26)}.btn.alt{background:#fff;color:var(--green);border:1px solid var(--line);box-shadow:none}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:42px}.stat{padding:20px;border-radius:22px;background:#fff;border:1px solid var(--line)}.stat b{display:block;font-size:28px;color:var(--red-dark)}.stat small{color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+    section{padding:78px 26px}.wrap{width:min(1120px,100%);margin:auto}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:30px}.section-head h2{font-family:'Playfair Display',serif;font-size:clamp(34px,5vw,58px);line-height:1;margin:0;letter-spacing:-.035em}.section-head p{margin:0;color:var(--muted);max-width:470px;line-height:1.6}.route{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.route-card{min-height:220px;border-radius:var(--radius);padding:24px;color:#fff;display:flex;flex-direction:column;justify-content:end;overflow:hidden;position:relative;box-shadow:var(--shadow);background-size:cover;background-position:center}.route-card:before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.70),rgba(0,0,0,.05))}.route-card>*{position:relative}.route-card h3{font-size:26px;margin:0 0 6px}.route-card p{margin:0;color:rgba(255,255,255,.86)}
+    .timeline{display:grid;gap:18px}.day{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:stretch}.day-num{border-radius:24px;background:var(--green);color:#fff;padding:20px;text-align:center;display:grid;place-content:center}.day-num b{font-size:32px}.day-num span{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.75)}.day-card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:0 12px 32px rgba(21,32,43,.06)}.day-card h3{font-size:24px;margin:0 0 10px}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.chip{font-size:13px;font-weight:700;padding:8px 12px;border-radius:999px;background:#fff3e0;color:#7b4d00}.chip.red{background:#ffe8e8;color:#9d1d26}.chip.green{background:#e7f4ef;color:#19483f}
+    .feature-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}.feature{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;box-shadow:0 12px 32px rgba(21,32,43,.06)}.feature h3{font-size:28px;margin:0 0 12px}.feature p,.feature li{color:#5d6765;line-height:1.65}.tips{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.tip{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px}.tip .icon{font-size:30px}.tip h4{margin:12px 0 6px}.tip p{margin:0;color:var(--muted);line-height:1.55}.cta{margin-top:20px;border-radius:34px;background:linear-gradient(135deg,var(--red),var(--red-dark));color:#fff;padding:42px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:20px;box-shadow:var(--shadow)}.cta h2{font-family:'Playfair Display',serif;font-size:46px;margin:0;letter-spacing:-.04em}.cta p{margin:10px 0 0;color:rgba(255,255,255,.85)}.footer{padding:30px 26px 56px;color:#7a6f65;text-align:center;font-size:13px}.note{font-size:12px;color:#8b8178;margin-top:14px}
+    @media (max-width:840px){.navlinks{display:none}.hero{padding:18px}.hero-card{padding:58px 24px}.stats,.route,.tips,.feature-grid{grid-template-columns:1fr}.day{grid-template-columns:1fr}.section-head{display:block}.cta{grid-template-columns:1fr}.cta h2{font-size:34px}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <a class="brand" href="#"><span>日</span> Japan Student Tour</a>
+      <div class="navlinks"><a href="#route">Route</a><a href="#itinerary">Itinerary</a><a href="#tips">Traveler Tips</a></div>
+    </nav>
+    <div class="hero-card">
+      <div class="eyebrow">June 1–9, 2026 • 9 Days</div>
+      <h1>Japan: Land of the Rising Sun</h1>
+      <p class="lead">A student-friendly journey through Japan’s biggest icons: Tokyo neighborhoods, Kamakura temples, Hakone mountain views, Kyoto culture, Nara heritage, and Osaka nightlife.</p>
+      <div class="hero-actions"><a class="btn" href="#itinerary">View itinerary</a><a class="btn alt" href="#tips">Travel tips</a></div>
+      <div class="stats">
+        <div class="stat"><b>35</b><small>Travelers</small></div>
+        <div class="stat"><b>6</b><small>Cities / Areas</small></div>
+        <div class="stat"><b>3</b><small>Hotel Bases</small></div>
+        <div class="stat"><b>1</b><small>Bullet Train Ride</small></div>
+      </div>
+    </div>
+  </header>
+
+  <section id="route">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>The route</h2>
+        <p>From modern Tokyo to sacred Nara, the trip follows a classic golden-route path with cultural stops, free time, and hands-on student moments.</p>
+      </div>
+      <div class="route">
+        <article class="route-card" style="background-image:url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=900&q=80')"><h3>Tokyo</h3><p>Asakusa, Ueno, Akihabara, Harajuku & Shibuya</p></article>
+        <article class="route-card" style="background-image:url('https://images.unsplash.com/photo-1579487008058-2b3d93ec9a77?auto=format&fit=crop&w=900&q=80')"><h3>Kamakura</h3><p>Great Buddha, Hachimangu Shrine & seaside-town free time</p></article>
+        <article class="route-card" style="background-image:url('https://images.unsplash.com/photo-1554797589-7241bb691973?auto=format&fit=crop&w=900&q=80')"><h3>Hakone</h3><p>Open-air art, Owakudani, castle photo stop & bullet train</p></article>
+        <article class="route-card" style="background-image:url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=900&q=80')"><h3>Kansai</h3><p>Kyoto, Nara, Fushimi Inari & Dotonbori</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="itinerary">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Day-by-day itinerary</h2>
+        <p>A polished traveler version of the itinerary, focused on what students and chaperones need to know.</p>
+      </div>
+      <div class="timeline">
+        <article class="day"><div class="day-num"><span>Day</span><b>1</b></div><div class="day-card"><h3>Monday, June 1 — Departure Day</h3><p>Begin the journey to Japan and get ready for a full week of culture, food, history, and city exploration.</p><div class="chips"><span class="chip green">Travel day</span><span class="chip">Group orientation</span></div></div></article>
+        <article class="day"><div class="day-num"><span>Day</span><b>2</b></div><div class="day-card"><h3>Tuesday, June 2 — Arrival in Japan</h3><p>Arrive in the Tokyo/Narita area, transfer to the hotel, and kick off the trip with a fun Japanese convenience store dinner experience.</p><div class="chips"><span class="chip red">Tokyo/Narita</span><span class="chip">Conbini challenge</span><span class="chip green">Hotel check-in</span></div></div></article>
+        <article class="day"><div class="day-num"><span>Day</span><b>3</b></div><div class="day-card"><h3>Wednesday, June 3 — Tokyo Sightseeing</h3><p>Explore Tokyo with a local guide. Highlights include Sensoji Temple in Asakusa, Ueno Park, Tokyo National Museum, and Akihabara. End the day with a sumo-style hot pot dinner.</p><div class="chips"><span class="chip red">Asakusa</span><span class="chip">Ueno</span><span class="chip">Tokyo National Museum</span><span class="chip">Akihabara</span><span class="chip green">Chanko dinner</span></div></div></article>
+        <article class="day"><div class="day-num"><span>Day</span><b>4</b></div><div class="day-card"><h3>Thursday, June 4 — Shrines, Fashion & Shibuya</h3><p>Visit Meiji Shrine, walk through Harajuku’s shopping district, experience Shibuya, and enjoy free time in Tokyo. Optional karaoke may be available depending on final arrangements.</p><div class="chips"><span class="chip red">Meiji Shrine</span><span class="chip">Harajuku</span><span class="chip">Shibuya</span><span class="chip green">Free time</span></div></div></article>
+        <article class="day"><div class="day-num"><span>Day</span><b>5</b></div><div class="day-card"><h3>Friday, June 5 — Kamakura to Hakone</h3><p>Travel toward Hakone with a stop in Kamakura. See the Great Buddha, visit Hachimangu Shrine, and enjoy free time before continuing to the Hakone/Atami area.</p><div class="chips"><span class="chip red">Kamakura</span><span class="chip">Great Buddha</span><span class="chip">Hachimangu Shrine</span><span class="chip green">Hakone/Atami hotel</span></div></div></article>
+        <article class="day"><div class="day-num"><span>Day</span><b>6</b></div><div class="day-card"><h3>Saturday, June 6 — Hakone & Bullet Train to Kyoto</h3><p>Visit Hakone Open-Air Museum, enjoy time around Owakudani, stop for an Odawara Castle photo, then ride the bullet train from Odawara to Kyoto.</p><div class="chips"><span class="chip red">Hakone Open-Air Museum</span><span class="chip">Owakudani</span><span class="chip">Odawara Castle</span><span class="chip green">Shinkansen</span></div></div></article>
+        <article class="day"><div class="day-num"><span>Day</span><b>7</b></div><div class="day-card"><h3>Sunday, June 7 — Kyoto Highlights</h3><p>Tour Kyoto with a local guide. Visit Kinkakuji, Nijo Castle, and the Arashiyama Bamboo Grove before returning to the Kansai hotel base.</p><div class="chips"><span class="chip red">Kinkakuji</span><span class="chip">Nijo Castle</span><span class="chip">Arashiyama</span><span class="chip green">Guided sightseeing</span></div></div></article>
+        <article class="day"><div class="day-num"><span>Day</span><b>8</b></div><div class="day-card"><h3>Monday, June 8 — Fushimi Inari, Nara & Osaka</h3><p>Start at Fushimi Inari Shrine, then continue to Nara for Todaiji Temple and Kasuga Taisha Shrine. Later, transfer to Osaka and explore the Dotonbori canal district.</p><div class="chips"><span class="chip red">Fushimi Inari</span><span class="chip">Todaiji Temple</span><span class="chip">Kasuga Taisha</span><span class="chip green">Dotonbori</span></div></div></article>
+        <article class="day"><div class="day-num"><span>Day</span><b>9</b></div><div class="day-card"><h3>Tuesday, June 9 — Departure from Osaka</h3><p>Transfer from the hotel to the airport and say farewell to Japan after a packed week of temples, cities, food, museums, and unforgettable views.</p><div class="chips"><span class="chip green">Airport transfer</span><span class="chip">Departure day</span></div></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap feature-grid">
+      <article class="feature"><h3>Tour highlights</h3><p>This itinerary balances famous landmarks with student-friendly experiences: temple visits, city walks, museums, shopping districts, local meals, and a bullet train ride.</p><ul><li>Tokyo classics: Sensoji, Ueno, Akihabara, Meiji Shrine, Harajuku, and Shibuya</li><li>Kamakura culture: Great Buddha and Hachimangu Shrine</li><li>Hakone scenery: Open-Air Museum, Owakudani, and Odawara Castle photo stop</li><li>Kyoto heritage: Kinkakuji, Nijo Castle, and Arashiyama Bamboo Grove</li><li>Nara and Osaka finale: Todaiji, Kasuga Taisha, and Dotonbori</li></ul></article>
+      <article class="feature"><h3>Hotel bases</h3><p><strong>Tokyo/Narita:</strong> The Hedistar Hotel Narita</p><p><strong>Hakone/Atami:</strong> PAIPU NO KEMURI Atami</p><p><strong>Kansai/Nara:</strong> Iroha Grand Hotel Kintetsu Nara</p><p class="note">Hotel names are included for traveler orientation only. Final details should always be confirmed by the tour director or group leader.</p></article>
+    </div>
+  </section>
+
+  <section id="tips">
+    <div class="wrap">
+      <div class="section-head"><h2>Traveler tips</h2><p>Small things that make Japan travel smoother, especially for students and first-time visitors.</p></div>
+      <div class="tips">
+        <div class="tip"><div class="icon">👟</div><h4>Wear comfortable shoes</h4><p>Expect lots of walking at temples, stations, museums, shopping streets, and shrine grounds.</p></div>
+        <div class="tip"><div class="icon">💴</div><h4>Carry some cash</h4><p>Japan is card-friendly in many places, but small shops, temples, and local food spots may still prefer cash.</p></div>
+        <div class="tip"><div class="icon">🧃</div><h4>Use convenience stores</h4><p>Conbini are great for snacks, drinks, breakfast items, umbrellas, and quick travel essentials.</p></div>
+        <div class="tip"><div class="icon">🙏</div><h4>Respect shrine etiquette</h4><p>Keep voices low, follow signs, avoid blocking paths, and ask before taking photos in sacred areas.</p></div>
+        <div class="tip"><div class="icon">🚆</div><h4>Stay station-ready</h4><p>Keep tickets, IC cards, and small bags handy. Stations can be busy and fast-moving.</p></div>
+        <div class="tip"><div class="icon">🌦️</div><h4>Pack for June weather</h4><p>June can be warm and humid with rain, so bring a light rain jacket or compact umbrella.</p></div>
+      </div>
+      <div class="cta"><div><h2>Ready for Japan?</h2><p>Nine days. Temples, towers, trains, food, deer, bamboo, neon, and a ridiculous number of photo stops.</p></div><a class="btn alt" href="#itinerary">Back to itinerary</a></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    Traveler-facing tour website draft based on the provided itinerary document. Confidential supplier, contact, and operational details were intentionally excluded.
+  </footer>
+</body>
+</html>
